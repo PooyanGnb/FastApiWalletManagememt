@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pymongo
+python-dotenv
+PyJWT
+pydantic
+pydantic-settings

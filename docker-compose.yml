@@ -1,0 +1,35 @@
+services:
+  fastapi:
+    build: .
+    container_name: challenge_fastapi
+    volumes:
+      - .:/code
+    restart: always
+    ports:
+      - "808:80"
+    depends_on:
+      - mongo-db
+
+  mongo-db:
+    image: mongo:5.0
+    container_name: challenge_mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: PooYan123123
+      MONGO_INITDB_DATABASE: cleancode
+    restart: always
+    ports:
+      - "27017:27017"
+
+  mongo-express:
+    image: mongo-express
+    container_name: challenge_mongo_express
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: PooYan123123
+      ME_CONFIG_MONGODB_SERVER: mongo-db
+    ports:
+      - "8082:8081"
+    restart: always
+    depends_on:
+      - mongo-db
