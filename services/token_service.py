@@ -44,7 +44,7 @@ class TokenService:
             payload = jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
             return payload
         except:
-            raise HTTPException(detail="Invalid token", status_code=400)
+            raise HTTPException(detail="Invalid token", status_code=401)
         
     @staticmethod
     def get_email_from_token(authorization: str = Header(...)):
@@ -65,7 +65,7 @@ class TokenService:
             decode_token = TokenService.decode_token(authorization)
             email = decode_token["sub"]
         except:
-            raise HTTPException(detail="Invalid token", status_code=400)
+            raise HTTPException(detail="Invalid token", status_code=401)
         return email
             
         

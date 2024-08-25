@@ -2,7 +2,6 @@ import unittest
 from unittest.mock import patch, MagicMock
 from fastapi import HTTPException
 from datetime import datetime, timedelta
-import asyncio
 
 from services.wallet_service import WalletService
 

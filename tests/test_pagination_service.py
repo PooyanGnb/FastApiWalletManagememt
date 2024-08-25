@@ -1,7 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
 import asyncio
-from pymongo.collection import Collection
 
 from services.pagination_service import PaginationService
 
