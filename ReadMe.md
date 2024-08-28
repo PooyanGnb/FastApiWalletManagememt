@@ -47,7 +47,7 @@ Here is a brief overview of how to interact with the endpoints:
 - **Login (POST):**
 
 
-| parameters | type | special |
+| parameters | type | required |
 |----|----|----|
 | email | str | Required
 | password | str | Required 
@@ -77,7 +77,7 @@ Here is a brief overview of how to interact with the endpoints:
 
 - **Signup (POST):**
 
-|parameters|type|special|
+|parameters|type|required|
 |----|----|----|
 | email | string | Required
 | password | str | Required 
