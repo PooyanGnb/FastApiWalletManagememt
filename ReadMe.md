@@ -222,7 +222,7 @@ If you encounter any issues, refer to the FastAPI [documentation](https://fastap
 
 ## Authors
 
-Pooyan Ghanbari - [GitHub](https://github.com/PooyanGnb/)
+Pooyan Ghanbari - [linkedin](https://www.linkedin.com/in/pooyan-ghanbari/) 
 
 ## Version History
 
